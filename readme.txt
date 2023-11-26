@@ -1,0 +1,1 @@
+This project was a training project I used to lear CSS development
