@@ -116,9 +116,11 @@ div.col1 {
     margin-bottom: 20px;
 }
 
+/*
 div.col2 {
-   /* float:right; */
+    float:right;
 }
+*/
 
 div.ingrediants p{
     text-align: center;
