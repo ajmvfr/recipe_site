@@ -21,20 +21,9 @@ div.seperator {
 }
 div.content {
     background-color: white;
-    /* 
-        For Margin parameters are counter clockwise
-        Top right botton left
-        can be in pixels(px) or percent(%)
-    */
-    margin: 60px 10% 80px 10%;
-    /* 
-        Padding is same as margin
-    */
-    padding: 0px 30px 30px 30px;
-    min-width: 350;
-    
-    /* Four length values and a color */
-    /* <length x> | <length y> | <blur-radius> | <spread-radius> | <color> */
+    margin: 40px 8px 80px 8px;
+    padding: 0px 8px 20px 8px;
+    /* min-width: 350; */ /* removed for mobile dev*/
     box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.2);
     overflow: visible;
 }
@@ -82,7 +71,7 @@ table.info {
     color: white; 
     background-color: #6c8290c0;
     /* the c0 of the end of the color above is the opacity*/
-    height: 80px
+    height: 50px
 }
 div.info {
     position:relative
@@ -91,12 +80,12 @@ div.info {
 table.info td {
     text-align: center;
     vertical-align: top;
-    font-size: 14px;
+    font-size: 12px;
 }
 table.info th {
     vertical-align: bottom;
     padding-bottom: 8px;
-    font-size: 16px;
+    font-size: 14px;
 }
 /* this is how to comment in CSS */
 
@@ -109,7 +98,7 @@ img.info{
 }
 
 div.col {
-    width: 45%; 
+    width: 100%; 
     margin-top: 20px;   
 }
 
@@ -123,12 +112,12 @@ div.col h2{
 
 div.col1 {
     display: inline-block;
-    margin-right: 10%;
+   /* margin-right: 10%; */
     margin-bottom: 20px;
 }
 
 div.col2 {
-    float:right;
+   /* float:right; */
 }
 
 div.ingrediants p{
@@ -169,3 +158,40 @@ table.instructions tr{
     height: 40px; /* height is used in TR's because min-height does not work the same and height will function the same as a tr */
 }
 
+/* This is for desktop */
+@media only screen and (min-width: 768px) {
+    div.content {
+        margin: 60px 10% 80px 10%;
+        padding: 0px 30px 30px 30px;
+        min-width: 350;
+    }
+    table.info {
+        height: 80px
+    }
+    table.info td {
+        font-size: 14px;
+    }
+    table.info th {
+        font-size: 16px;
+    }
+    div.col {
+        width: 45%; 
+    }
+    div.col1 {
+        margin-right: 10%; 
+    }
+    div.col2 {
+        float:right;
+    }
+}
+
+/* This is for big screen desktop */
+@media only screen and (min-width: 900px) {
+    div.content {
+        /* using auto in the pargine will keep the page centered */
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 630px;
+        max-width: 650px;
+    }
+}
