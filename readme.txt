@@ -1,1 +1,1 @@
-This project was a training project I used to lear CSS development
+This project was a training project I used to learn CSS development
